@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #E6F3E5;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 6px;
+  color: #263856;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.selected h2 {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+.thread1 {
+  position: absolute;
+  left: 2px;
+}
+
+.thread2{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 100;
+}
+
+.bracket {
+  height: 15px;
+  width: 55px;
+  border-radius: 5px / 10px;
+  background: linear-gradient(#A07232, #BE924C, #A07232);
+  margin: 0 auto;
+  box-shadow: 2px 2px 15px #6e838a;
+}
+
+#colorPicker{
+  display: none;
+}
+
+.gridWrap {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #ac9588;
+  box-shadow: 2px 2px 15px #6e838a;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+}
+
+.grid > div {
+  position: relative;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #d8d6d6;
+  background: #f0eeee;
+}
+
+.stitch1,
+.stitch2 {
+  position: absolute;
+  width: 33%;
+  left: 33%;
+  top: -10%;
+  height: 0%;
+  transition: height 0.2s;
+  border-radius: 1px;
+  background: black;
+  transform-origin: center;
+}
+
+.stitch1 {
+  transform: rotate(45deg);
+}
+
+.stitch2 {
+  transform: rotate(-45deg);
+  transition-delay: 0.1s;
+}
+
+.spools {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.colorSpool,
+.emptySpool {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.spoolEnd {
+  height: 30px;
+  width: 70px;
+  border-radius: 50%;
+  background: radial-gradient(#564a44 19%, #ac9588 20%);
+  border-bottom: solid 3px #9a867a;
+  z-index: 1;
+}
+
+.spoolEnd:after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 70px;
+  border-radius: 50%;
+  background: #ac9588;
+  top: 53px;
+  border-bottom: solid 3px #9a867a;
+}
+
+.colorSpoolBody,
+.emptySpoolBody {
+  position: relative;
+  height: 60px;
+  width: 50px;
+  background: #ac9588;
+  top: -10px;
+  box-shadow: 2px 2px 15px #6e838a;
+}
+
+.colorSpoolBody {
+  background: #639FB0;
+}
+
+.colorSpoolBody:after,
+.emptySpoolBody:after {
+  position: absolute;
+  content: '';
+  background: inherit;
+  width: 50px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+  top: 33px;
+  z-index: 2;
+  border-bottom: solid 3px #9a867a;
+}
+
+.emptySpoolClick {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: solid 2px black;
+  top: 0;
+  z-index: 100;
+}
