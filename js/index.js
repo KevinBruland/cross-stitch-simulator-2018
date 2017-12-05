@@ -8,10 +8,12 @@
     mouseDown = !mouseDown;
   }
 
-  $(document).on("mousedown mouseup", mouseHandler);
+  $(window).on("mousedown mouseup", mouseHandler);
 
   $('.emptySpoolClick').on('click', function(){
     clearSelected = true;
+    $('.emptySpool').addClass('selected');
+    $('.colorSpool').removeClass('selected');
   });
   
   // Prevent dragging which disables mouseenter
@@ -28,6 +30,8 @@
 
   $("#colorPicker").on("click", function() {
     clearSelected = false;
+    $('.colorSpool').addClass('selected');
+    $('.emptySpool').removeClass('selected');  
   });
   
   function drawStitch(square, animation) {
