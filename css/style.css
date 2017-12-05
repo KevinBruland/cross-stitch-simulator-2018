@@ -34,6 +34,10 @@ h2 {
           text-decoration-skip: ink;
 }
 
+/* .selected {
+  background: radial-gradient(circle, #b8c2b7, transparent 65%);
+} */
+
 .thread1 {
   position: absolute;
   left: 2px;
@@ -53,7 +57,7 @@ h2 {
   background: -webkit-linear-gradient(#A07232, #BE924C, #A07232);
   background: linear-gradient(#A07232, #BE924C, #A07232);
   margin: 0 auto;
-  box-shadow: 2px 2px 15px #6e838a;
+  box-shadow: 2px 2px 15px rgba(110, 131, 138, .6);
 }
 
 #colorPicker {
@@ -66,7 +70,7 @@ h2 {
   border-radius: 50%;
   overflow: hidden;
   border: 10px solid #ac9588;
-  box-shadow: 2px 2px 15px #6e838a;
+  box-shadow: 2px 2px 15px rgba(110, 131, 138, .6);
 }
 
 .grid {
@@ -97,10 +101,11 @@ h2 {
   height: 0%;
   -webkit-transition: height 0.2s;
   transition: height 0.2s;
-  border-radius: 1px;
+  border-radius: 2px;
   background: black;
   -webkit-transform-origin: center;
           transform-origin: center;
+  box-shadow: .5px .5px .5px rgba(110, 131, 138, .5);
 }
 
 .stitch1 {
@@ -156,6 +161,7 @@ h2 {
   background: radial-gradient(#564a44 19%, #ac9588 20%);
   border-bottom: solid 3px #9a867a;
   z-index: 1;
+  box-shadow: 2px 2px 2px rgba(110, 131, 138, .2),  -2px 2px 2px rgba(110, 131, 138, .2);
 }
 
 .spoolEnd:after {
@@ -167,6 +173,7 @@ h2 {
   background: #ac9588;
   top: 53px;
   border-bottom: solid 3px #9a867a;
+  box-shadow: 2px 2px 4px rgba(110, 131, 138, .4),  -2px 2px 4px rgba(110, 131, 138, .4);
 }
 
 .colorSpoolBody,
@@ -176,7 +183,7 @@ h2 {
   width: 50px;
   background: #ac9588;
   top: -10px;
-  box-shadow: 2px 2px 15px #6e838a;
+  box-shadow: 2px 2px 6px rgba(110, 131, 138, .5);
 }
 
 .colorSpoolBody {
@@ -194,6 +201,7 @@ h2 {
   top: 33px;
   z-index: 2;
   border-bottom: solid 3px #9a867a;
+  /* box-shadow: 2px 2px 2px rgba(110, 131, 138, .3),  -2px 2px 2px rgba(110, 131, 138, .3); */
 }
 
 .emptySpoolClick {
@@ -201,7 +209,6 @@ h2 {
   height: 100%;
   width: 100%;
   background: transparent;
-  border: solid 2px black;
   top: 0;
   z-index: 100;
 }
